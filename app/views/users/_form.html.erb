@@ -1,0 +1,24 @@
+<%= form_with(model: user, local: true) do |form| %>
+  <div class="row">
+    <div class="col-4 offset-4 border border-secondary p-5 bg-light">
+      <div class="form-group">
+        <%= form.label :email %>
+        <%= form.text_field :email, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :password %>
+        <%= form.password_field :password, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :password_confirmation %>
+        <%= form.password_field :password_confirmation, class: 'form-control' %>
+      </div>
+
+      <div class="text-center">
+        <%= form.submit class: 'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
+<% end %>
